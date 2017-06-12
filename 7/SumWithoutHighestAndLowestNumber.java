@@ -9,7 +9,7 @@ public class SumWithoutHighestAndLowestNumber {
             for (int i = 0; i < ARRAY_LENGTH; i++)
                 testArray[i] = (int) Math.floor(Math.random()*100 - 50);
             System.out.println("Random array: " + Arrays.toString(testArray));
-            int sum_test = sumWithoutHighestLowest(testArray);
+            int sum_test = sol1(testArray);
             Arrays.sort(testArray);
             System.out.println("Sorted: " + Arrays.toString(testArray));
             int sum = 0;
@@ -20,7 +20,7 @@ public class SumWithoutHighestAndLowestNumber {
 
         }
 
-        public static int sumWithoutHighestLowest (int[] nums){
+        public static int sol1 (int[] nums){
             if (nums == null || nums.length <= 1) return 0;
 
             int min, max, sum;
